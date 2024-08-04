@@ -1,0 +1,2692 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap demo</title>
+  <link rel="stylesheet" href="./assets/css/detail.css">
+  <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css">
+ <style>
+    @media (max-width: 768px) {
+    .banner02 {
+      display: none;
+    }
+    .carousel-item > img{
+      width:100%;
+    }
+    .banner{
+      display: none;
+  
+}
+.carousel-inner{
+      position: relative;
+      z-index:0;
+      
+  }
+  }
+  body{
+      background-color: #f8f8fc;
+      margin: 0px;
+      padding: 0px;
+  }
+  .position-relative {
+          position: relative;
+      }
+
+      .search-input {
+          padding-right: 40px; /* Để chứa nút search */
+          width:300px;
+          
+      }
+
+      .search-button {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          width: 40px; /* Chiều rộng của nút */
+          border: none;
+          background: none;
+          cursor: pointer;
+      
+      }
+
+      .search-icon {
+          color: #aaa;
+      }
+      .dangnhap {
+          text-decoration: none ;
+          font-weight: 100;
+          font-size: 20px;
+          margin-bottom: 5px;
+          color:rgb(130, 134, 158);
+      }
+
+      .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      width: 300px;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      padding: 12px 16px;
+      z-index: 1;
+}
+
+.content:hover .dropdown-content {
+  display: block;
+}
+.main{
+  padding: 0px;
+  margin: 0px;
+}
+.silde{
+  position: relative;
+}
+.banner{
+  display: block;
+  position: absolute;
+  bottom:-50px;
+  z-index:99;
+}
+
+@media (max-width: 768px) {
+    .banner{
+     display: none;
+
+     
+}
+.carousel-item{
+      width:100%;
+      height:100%;
+      
+    }
+}
+.banner01{
+  max-width:240px;
+  max-height:150px;
+  transition: 0.5s;
+}
+.banner01:hover
+{
+  transform:scale(1.2);
+  box-shadow: 2px 2px 2px #f3f2f2;
+  z-index: 2;
+}
+
+@media (max-width:1200px) {
+    .banner01{
+      max-width:200px;
+      max-height:140px;
+     
+    }
+}
+
+.products{
+  display: block;
+  background-image: url("./assets/img/bg01.jpg");
+  background-size: cover;
+  background-repeat: none;
+  min-height: 350px;
+}
+
+  .nav-link.active {
+      background-color: rgb(104, 14, 251) !important;
+      color: rgb(232, 229, 229); /* Thay đổi màu chữ nếu cần */
+  }
+  .nav-tabs .nav-link {
+  border-bottom: none;
+}
+.card-text,
+.price,
+.old-price,
+.discount {
+  margin: 0; /* Xóa margin */
+  padding: 0; /* Xóa padding */
+}
+@media (max-width:500px) {
+  .products{
+  min-height: 350px;
+  background-image: none;
+}
+}
+.carousel-control-next-icon {
+      color: #343a40 !important; /* Thay đổi màu sắc tại đây */
+  }
+#countdown {
+font-size: 24px;
+font-weight: bold;
+color: rgb(243, 234, 234);
+}
+.time{
+  color: rgb(246, 241, 241);
+  padding:0px;margin: 0px;
+  font-size: large;
+  font-weight:bold;
+}
+@media (max-width:500px) {
+#countdown {
+color: rgb(71, 70, 70) !important;
+}
+.time{
+color: rgb(71, 70, 70) !important;
+font-family: 'Times New Roman', Times, serif;
+}
+
+}
+.sale{
+  display: block;
+  background-image: url("./assets/img/bg02.jpg");
+  background-size: cover;
+  background-repeat: none;
+  min-height: 350px;
+}
+
+
+.salenow.active {
+      background-color: rgb(26, 28, 30) !important;
+      color: rgb(232, 229, 229); /* Thay đổi màu chữ nếu cần */
+  }
+.sale2{
+ color: rgb(78, 76, 76);
+ font-weight: bold;
+ font-size: x-large;
+ font-family: 'Times New Roman', Times, serif;
+ text-align: center;
+}
+
+@media (max-width:500px) {
+.sale{
+  background-image: none;
+}
+.sale2 { 
+  font-size: large;
+}
+}
+.no-p-m {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.sale2new{
+  width:588px;
+}
+@media (max-width:1250px) {
+
+.sale2new { 
+  width:100%;
+}
+
+}
+
+.laptop{
+  min-height: 350px;
+  max-width:228px;
+  
+  background-color: rgb(255, 255, 255);
+}
+
+@media (max-width:1250px) {
+
+.laptop { 
+  width:200px;
+}
+}
+html, body {
+  margin: 0;
+  padding: 0;
+}
+.centered-row {
+      display: flex;
+      justify-content: center;
+  }
+.bnlaptop{
+  background-image: url("./assets/img/bnlt.jpg");
+  background-repeat: none;
+  background-size: cover;
+}
+.bnlk{
+  background-image: url("./assets/img/bnlaptop.jpg");
+  background-repeat: none;
+  background-size: cover;
+}
+.bnmh{
+  background-image: url("./assets/img/bannermanhinh.jpg");
+  background-repeat: none;
+  background-size: cover;
+}
+.bngaming{
+  background-image: url("./assets/img/gaming.jpg");
+  background-repeat: none;
+  background-size: cover;
+}
+.bngd{
+  background-image: url("./assets/img/diengd.png");
+  background-repeat: none;
+  background-size: cover;
+}
+
+.logolatop{
+  background-color:rgb(255, 255, 255);
+  max-width: 295px;
+}
+@media (max-width:1000px) {
+
+.logolatop { 
+  max-width:200px;
+}
+}
+.contentcenter{
+display: flex; 
+justify-content: center;
+align-items: center;
+}
+/*iphone 14 pro*/
+@media (max-width:500px) {
+.contentcenter{
+display: flex; 
+justify-content:left;
+align-items: center;
+margin-right: 0;
+}
+.laptop{
+  min-height: 350px;
+  max-width: 185px;
+  background-color: rgb(255, 255, 255);
+}
+}
+/*iphone 14 pro*/
+@media (max-width:420px) {
+.contentcenter{
+display: flex; 
+justify-content:left;
+align-items: center;
+margin-right: 0;
+}
+.laptop{
+  min-height: 350px;
+  max-width: 180px;
+  background-color: rgb(255, 255, 255);
+}
+}
+/* iphone 12pro*/
+@media (max-width:400px) {
+.contentcenter{
+display: flex; 
+justify-content:left;
+align-items: center;
+margin-right: 0;
+}
+.laptop{
+  min-height: 350px;
+  max-width: 167px;
+  background-color: rgb(255, 255, 255);
+}
+}
+/* sam sung S8+*/
+@media (max-width:370px) {
+.laptop{
+  min-height: 350px;
+  max-width: 154px;
+  background-color: rgb(255, 255, 255);
+}
+.contentcenter{
+display: flex; 
+justify-content:left;
+align-items: center;
+margin-right: 0;
+}
+}
+@media (max-width:1200px) {
+.contentcenter{
+display: flex; 
+justify-content:left;
+align-items: center;
+margin-right: 0;
+}
+}
+
+.image-container {
+display: inline-block;
+overflow: hidden; /* Đảm bảo hình ảnh không bị tràn ra ngoài khung */
+}
+
+.image-container img {
+display: block;
+transition: transform 0.3s ease; /* Tạo hiệu ứng mượt mà */
+}
+
+.image-container:hover img {
+transform: scale(1.1); /* Phóng to hình ảnh lên 1.1 lần khi hover */
+}
+@media (max-width:1200px) {
+.danhmucne{
+display: none;
+}
+}
+
+  </style>
+</head>
+<body>
+    <div class="main">
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <div>
+              Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+            </div>
+          </div>
+        </div>
+     <!---banner-->
+  <div class="banner02 container-fluid">
+      <div class="row">
+          <div class="col-lg-12 m-0 p-0">
+              <a><img src="./assets/img/bn.jpg" class="img-fluid w-100" style="height:60px;"></a>
+          </div>
+      </div>
+  </div>
+  <!---endbanner-->
+  
+  <!---danhmuc-->
+  <div class="danhmuc container-fluid" style="background-color: #00ccff;">
+      <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid">
+            <button class=" navbar-brand navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+             
+              <div class="container">
+                  <div class="row">
+                      <div class="col-lg-2"></div>
+                      <div class="col-lg-8">
+                          <nav class="navbar navbar-expand-sm d-flex align-items-center justify-content-center p-0 ">
+                              <div class="container-fluid">
+                                <!-- Links -->
+                                <ul class="navbar-nav">
+                                  <li class="nav-item me-1">
+                                    <a class="nav-link" href="#" style="color: white;"><i class="fa-solid fa-mobile-screen-button"></i><span class="sezi"> ĐIỆN THOẠI</span></a>
+                                  </li>
+                                  <li class="nav-item  me-1">
+                                    <a class="nav-link" href="#" style="color: white;"><i class="fa-solid fa-laptop"></i><span class="sezi"> LAPTOP</span></a>
+                                  </li>
+                                  <li class="nav-item  me-1">
+                                    <a class="nav-link" href="#" style="color: white;"><i class="fa-solid fa-tablet-screen-button"></i> <span class="sezi">PC GAMING</span></a>
+                                  </li>
+                                  <li class="nav-item  me-1">
+                                    <a class="nav-link" href="#" style="color: white;"><i class="fa-brands fa-apple"></i><span class="sezi">MACBOOK</span></a>
+                                  </li>
+                                  <li class="nav-item  me-1">
+                                    <a class="nav-link" href="#" style="color: white;" ><i class="fa-solid fa-computer"></i><span class="sezi">MÀN HÌNH</span></a>
+                                  </li>
+                                  <li class="nav-item  me-1">
+                                    <a class="nav-link" href="#" style="color: white;"><i class="fa-solid fa-headphones-simple"></i><span class="sezi"> PHỤ KIỆN</span></a>
+                                  </li>
+                                  <li class="nav-item  me-1">
+                                    <a class="nav-link" href="#" style="color: white;"><i class="fa-solid fa-rotate-right"></i><span class="sezi">BÀN PHÍM</span></a>
+                                  </li>
+                                  <li class="nav-item  me-1">
+                                      <a class="nav-link" href="#" style="color: white;"><i class="fa-solid fa-rotate-right"></i><span class="sezi">CARD</span></a>
+                                    </li>
+                                  <li class="nav-item  me-1">
+                                      <a class="nav-link" href="#" style="color: white;"><i class="fa-solid fa-rotate-right"></i><span class="sezi">BẢO TRÌ</span></a>
+                                    </li>
+                                </ul>
+                              </div>
+                            </nav>
+                      </div>
+                      <div class="col-lg-2"></div>
+                  </div>
+               
+                
+              </div>
+  
+  
+            </div>
+          </div>
+        </nav>
+  
+        </div>
+  <!--enddanhmuc-->
+  
+  
+  
+      <!---nav-->
+      <div class="container-fluid sticky-top">
+          <div class="row align-items-center "style="background-color:#FFFFFF;"> 
+              <div class="col-lg-1"></div>
+              <div class="col-lg-10">
+                  <div class="row">
+                      <div class="col-lg-8 col-4" >
+                      <div class="row align-items-center">
+                          <div class="col-lg-4">
+                              <img src="./assets/img/logo-full.svg" style="width:240px;height:80px;">
+                          </div>
+                          <div class="col-lg-8 d-flex">
+                              <form action="" method="" role="search">
+                                  <div class="position-relative">
+                                      <input class="form-control search-input" type="text" placeholder="Mua sắm nào ">
+                                      <button class="search-button" type="submit">
+                                          <svg xmlns="http://www.w3.org/2000/svg"  height="16" fill="currentColor" class="bi bi-search search-icon" viewBox="0 0 16 16">
+                                              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                                          </svg>
+                                      </button>
+                                  </div>
+                              </form>
+                              <span style=" display: inline;" class="ms-2">
+                                  <button class="btn" style="background-color: rgb(248,248,252);color:#aaa" name="danhmuc" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                                      <svg fill="currentColor" viewBox="0 0 512 512" size="20" class="css-11md2ba" color="textSecondary" height="26" width="25" xmlns="http://www.w3.org/2000/svg"><title></title><line x1="88" y1="152" x2="424" y2="152" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48px"></line><line x1="88" y1="256" x2="424" y2="256" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48px"></line><line x1="88" y1="360" x2="424" y2="360" fill="none" stroke="#000" stroke-linecap="round" stroke-miterlimit="10" stroke-width="48px"></line></svg>
+                                    <span class="danhmucne">Danh mục sản phẩm</span>
+                                  </button>
+                              </span>
+                          </div>
+                      </div>
+                      </div>
+                      <div class="col-lg-4 d-flex align-items-center"> 
+  
+                                  <span class="ms-2">   
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" fill="currentColor" class="bi bi-person" viewBox="0 0 16 16">
+                                          <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z"/>
+                                      </svg> 
+                                  </span>
+                                  <span class="content ms-2">
+                                      <a class="dangnhap" href="#!">Đăng nhập</a>
+                                      <div class="dropdown-content">
+                                      <div class="selectlogin">
+                                          <p>Xin chào,vui lòng đăng nhập</p>
+                                          <span class="ms-2">
+                                              <button type="button" class="btn btn-outline-primary" style="width:120px;">Đăng nhập</button>
+                                          </span>                                   
+                                          <span class="ms-2">
+                                              <button type="button" class="btn btn-outline-secondary"  style="width:120px;">Đăng kí</button>
+                                          </span>
+                                          <hr>
+                                          Trợ giúp ?
+                                      </div>
+                                      </div>
+  
+                                  </span>
+  
+  
+  
+                                  <span class="ms-5">   
+                                      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="26" fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                                          <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+                                      </svg>
+                                  </span>
+                                  <span class="content ms-2">
+                                      <a class="dangnhap" href="#!">Giỏ hàng của bạn (0)</a>
+                                      <div class="dropdown-content">
+                                      <div class="selectlogin">
+                                          <p>Chưa có sản phẩm  </p>
+                                      </div>
+                                      </div>
+  
+                                  </span>
+                      </div>
+                      
+                      </div>
+                  </div>
+              </div>
+              <div class="col-lg-1"></div>
+          </div>
+      <!--endnav-->
+  
+  
+  
+      <!---silde bỏ silde sẽ ko hơn padding--> 
+      <div class="silde container-fluid">
+          <div class="row">
+              <div class="col-lg-12">
+                  <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                      <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                      </div>
+                      <div class="carousel-inner">
+                        <div class="carousel-item active">
+                          <img src="./assets/img/banner01.jpg" class="d-block  img-fluid" alt="" style="width:100%;max-height:500px;">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="./assets/img/banner02.jpg" class="d-block img-fluid" alt="..." style="width:100%;max-height:500px;">
+                        </div>
+                        <div class="carousel-item">
+                          <img src="./assets/img/banner03.jpg" class="d-block img-fluid" alt="..." style="width:100%;max-height:500px;">
+                        </div>
+                      </div>
+                      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                      </button>
+                      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                      </button>
+                    </div>
+              </div>
+              <div class="banner col-lg-12">
+                  <div class="row">
+                      <div class="col-lg-12">
+                          <div class="row">
+                              <div class="col-lg-2"></div>
+                              <div class="col-lg-8">
+                                  <div class="row py-4">
+                                      <div class="col-lg-3 col-md-3 col-4 col-xs-6 col-6">
+                                          <img src="./assets/img/laptop.jpg" class="banner01 border rounded rounded-img img-fluid">
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-4 col-xs-6 col-6 ">
+                                          <img src="./assets/img/manhinh.jpg" class="banner01 border rounded rounded-img img-fluid">
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-4 col-xs-6 col-6 ">
+                                          <img src="./assets/img/maylanh.jpg" class="banner01 border rounded rounded-img img-fluid">
+                                      </div>
+                                      <div class="col-lg-3 col-md-3 col-4 col-xs-6 col-6 ">
+                                          <img src="./assets/img/sangtao.jpg" class="banner01 border rounded rounded-img img-fluid">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col-lg-2"></div>
+                          </div>
+                      </div>
+                      
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!--endslide-->
+  
+  
+      <!--sale01-->
+      <div class=" container-fluid mt-5">
+          <div class="row">
+          <div class="col-lg-1">
+          </div>
+          <div class="col-lg-10">
+                  <ul class="nav nav-tabs" id="myTabs" role="tablist">
+                      <li class="nav-item" role="presentation">
+                          <button class="nav-link active" style="color: rgb(78, 76, 76);"  id="description-tab" data-bs-toggle="tab" data-bs-target="#description" type="button" role="tab" aria-controls="description" aria-selected="true">
+                              <p class="p-0 m-0" style="color: rgb(78, 76, 76);font-weight: bold;" >Màn Hình Giá Tốt</p>
+                              <small>Chốt ngay deal 21%</small>   
+                          </button>
+                      </li>
+                      <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="additional-info-tab" style="color: rgb(78, 76, 76);" data-bs-toggle="tab" data-bs-target="#additional-info" type="button" role="tab" aria-controls="additional-info" aria-selected="false">
+                              <p class="p-0 m-0" style="color: rgb(78, 76, 76);font-weight: bold;" >Thổi Bay Cái Nóng</p>
+                              <small>Quạt chỉ từ 500k</small>   
+                          </button>
+                      </li> 
+                  
+                      <li class="nav-item" role="presentation">
+                          <button class="nav-link" id="reviews-tab"  style="color:rgb(78, 76, 76);"data-bs-toggle="tab" data-bs-target="#reviews" type="button" role="tab" aria-controls="reviews" aria-selected="false">
+                              <p class="p-0 m-0" style="color: rgb(78, 76, 76);font-weight: bold;" >Văn Phòng</p>
+                              <small>Giảm 20%</small>  
+                          </button> 
+                      </li>
+                  </ul>
+                  <div class="products tab-content" id="myTabsContent">
+                      <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                      
+  
+                          <div id="product-carousel" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner ">
+                                  <div class=" carousel-item active">
+                                  
+                                      <div class="row">
+  
+                                          <div class="col-lg-3">
+                                          <p class="time">Kết thúc sau 2 ngày</p>
+                                          <div id="countdown" ></div>
+                                          </div>
+  
+                                          <div class="col-lg-2 col-md-4 col-4 col-6 mt-4 p-2">
+                                              <div class="card" style="min-height: 350px;">
+                                                  <div class="image-container">
+                                                      <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 12">
+                                                  </div>
+                                              <div class="card-body">
+                                                  <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                                  <div class="product-info">
+                                                      <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                                      <p class="price" style="color: blue;">2.290.000₫</p>
+                                                      <p class="old-price">
+                                                          <small style="text-decoration: line-through;">2.619.000₫</small>
+                                                          <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                                      </p>                                                      
+                                                  </div>
+                                                  
+                                              </div>
+                                              </div>
+                                          </div>        
+                                          <div class="col-lg-2 col-md-4 col-4 col-6 mt-4 p-2">
+                                              <div class="card" style="min-height: 350px;">
+                                              <div class="image-container">
+                                                 <div class="image-container">
+                                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                                                 </div>
+                                              </div>
+                                              <div class="card-body">
+                                                  <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                                  <div class="product-info">
+                                                      <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                                      <p class="price" style="color: blue;">2.290.000₫</p>
+                                                      <p class="old-price" >
+                                                          <small style="text-decoration: line-through;">2.619.000₫</small>
+                                                          <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                                      </p>                                                      
+                                                  </div>
+                                                  
+                                              </div>
+                                              </div>
+                                          </div>               
+                                          <div class="col-lg-2 col-md-4 col-4 col-6 mt-4 p-2">
+                                              <div class="card" style="min-height: 350px;">
+                                             <div class="image-container">
+                                                 <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                                             </div>
+                                              <div class="card-body">
+                                                  <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                                  <div class="product-info">
+                                                      <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                                      <p class="price" style="color: blue;">2.290.000₫</p>
+                                                      <p class="old-price" >
+                                                          <small style="text-decoration: line-through;">2.619.000₫</small>
+                                                          <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                                      </p>                                                      
+                                                  </div>
+                                                  
+                                              </div>
+                                              </div>
+                                          </div>   
+                                          <div class="col-lg-2 col-md-4 col-4 col-6 mt-4 p-2">
+                                              <div class="card" style="min-height: 350px;">
+                                             <div class="image-container">
+                                                 <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                                             </div>
+                                              <div class="card-body">
+                                                  <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                                  <div class="product-info">
+                                                      <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                                      <p class="price" style="color: blue;">2.290.000₫</p>
+                                                      <p class="old-price" >
+                                                          <small style="text-decoration: line-through;">2.619.000₫</small>
+                                                          <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                                      </p>                                                      
+                                                  </div>
+                                                  
+                                              </div>
+                                              </div>
+                                          </div>   
+                                      
+                                      </div>
+                                  </div>
+  
+                                  <div class=" carousel-item ">
+                                  
+                                      <div class="row">
+  
+                                      <div class="col-lg-3">
+                                          
+                                      </div>
+  
+                                      <div class="col-lg-2 col-md-4 col-4 col-6 mt-4 p-2">
+                                          <div class="card" style="min-height: 350px;">
+                                         <div class="image-container">
+                                             <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                                         </div>
+                                          <div class="card-body">
+                                              <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                              <div class="product-info">
+                                                  <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                                  <p class="price" style="color: blue;">2.290.000₫</p>
+                                                  <p class="old-price" >
+                                                      <small style="text-decoration: line-through;">2.619.000₫</small>
+                                                      <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                                  </p>                                                      
+                                              </div>
+                                              
+                                          </div>
+                                          </div>
+                                      </div>        
+                                      <div class="col-lg-2 col-md-4 col-4 col-6 mt-4 p-2">
+                                          <div class="card" style="min-height: 350px;">
+                                         <div class="image-container">
+                                             <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                                         </div>
+                                          <div class="card-body">
+                                              <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                              <div class="product-info">
+                                                  <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                                  <p class="price" style="color: blue;">2.290.000₫</p>
+                                                  <p class="old-price" >
+                                                      <small style="text-decoration: line-through;">2.619.000₫</small>
+                                                      <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                                  </p>                                                      
+                                              </div>
+                                              
+                                          </div>
+                                          </div>
+                                      </div>               
+                                      <div class="col-lg-2 col-md-4 col-4 col-6 mt-4 p-2">
+                                          <div class="card" style="min-height: 350px;">
+                                         <div class="image-container">
+                                             <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                                         </div>
+                                          <div class="card-body">
+                                              <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                              <div class="product-info">
+                                                  <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                                  <p class="price" style="color: blue;">2.290.000₫</p>
+                                                  <p class="old-price" >
+                                                      <small style="text-decoration: line-through;">2.619.000₫</small>
+                                                      <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                                  </p>                                                      
+                                              </div>
+                                              
+                                          </div>
+                                          </div>
+                                      </div>   
+                                      <div class="col-lg-2 col-md-4 col-4 col-6 mt-4 p-2">
+                                          <div class="card" style="min-height: 350px;">
+                                         <div class="image-container">
+                                             <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                                         </div>
+                                          <div class="card-body">
+                                              <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                              <div class="product-info">
+                                                  <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                                  <p class="price" style="color: blue;">2.290.000₫</p>
+                                                  <p class="old-price" >
+                                                      <small style="text-decoration: line-through;">2.619.000₫</small>
+                                                      <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                                  </p>                                                      
+                                              </div>
+                                              
+                                          </div>
+                                          </div>
+                                      </div>   
+                                  
+                                  </div>
+                              </div>
+  
+  
+                              </div>
+                              <button class="carousel-control-prev" type="button"  data-bs-target="#product-carousel" data-bs-slide="prev">
+                                  <span class="carousel-control-prev-icon" aria-hidden="true" ></span>
+                                  <span class="visually-hidden">Previous</span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#product-carousel" data-bs-slide="next">
+                                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                  <span class="visually-hidden">Next</span>
+                              </button>
+                          </div>
+                          
+  
+  
+  
+  
+  
+                      </div>
+                      <div class="tab-pane fade" id="additional-info" role="tabpanel" aria-labelledby="additional-info-tab">
+                          <p>This is the additional information tab content.</p>
+                      </div>
+                      <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                          <p>This is the reviews tab content.</p>
+                      </div>
+                      <div class="tab-pane fade" id="newtab" role="tabpanel" aria-labelledby="newtab">
+                          <p>This is the reviews tab content.</p>
+                      </div>
+  
+                  </div>
+          </div>
+          <div class="col-lg-1"></div>
+          </div>
+      </div>
+      <!--endsale01-->
+  
+  <!--sale02-->
+  
+  <div class="container-fluid mt-4">
+      <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+              <ul class="nav nav-tabs" id="myTabs" role="tablist">
+                  <li class="nav-item col-lg-6 col-6" role="presentation">
+                      <button class="salenow nav-link active" id="tab1-tab" data-bs-toggle="tab" data-bs-target="#tab1" type="button" role="tab" aria-controls="tab1" aria-selected="true">
+                          <p class="p-0 m-0 sale2" >iPhone 15 series giảm thêm 300K + bảo hành 24 tháng &nbsp;&nbsp;&nbsp;&nbsp;</p>
+                          <small  style="color: rgb(78, 76, 76);">Nhập mã PVAP240401</small>   
+                      </button>
+                  </li>
+                  <li class="nav-item col-lg-6 col-6" role="presentation">
+                      <button class="salenow nav-link" id="tab2-tab" data-bs-toggle="tab" data-bs-target="#tab2" type="button" role="tab" aria-controls="tab2" aria-selected="false">
+                          <p class="p-0 m-0 sale2 sale2new" >&nbsp;Macbook M3 Giảm thêm 200K tặng túi đựng laptop sịn </p>
+                          <small  style="color: rgb(78, 76, 76);">Nhập mã PVAP240402</small>   
+                      </button>
+                  </li>
+              </ul>
+              <div class="sale tab-content" id="myTabsContent">
+                  <div class="tab-pane fade show active" id="tab1" role="tabpanel" aria-labelledby="tab1-tab">
+                     
+                      <div class="row">
+  
+                          <div class="col-lg-3">
+                          </div>   
+  
+                          <div class="col-lg-2 col-md-4 col-4 col-6 mt-4 p-2">
+                              <div class="card" style="min-height: 350px;">
+                             <div class="image-container">
+                                 <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                             </div>
+                              <div class="card-body">
+                                  <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                  <div class="product-info">
+                                      <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                      <p class="price" style="color: blue;">2.290.000₫</p>
+                                      <p class="old-price">
+                                          <small style="text-decoration: line-through;">2.619.000₫</small>
+                                          <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                      </p>                                                      
+                                  </div>
+                                  
+                              </div>
+                              </div>
+                          </div>        
+                          <div class="col-lg-2 col-md-4 col-4 col-6 mt-4 p-2">
+                              <div class="card" style="min-height: 350px;">
+                             <div class="image-container">
+                                 <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                             </div>
+                              <div class="card-body">
+                                  <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                  <div class="product-info">
+                                      <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                      <p class="price" style="color: blue;">2.290.000₫</p>
+                                      <p class="old-price" >
+                                          <small style="text-decoration: line-through;">2.619.000₫</small>
+                                          <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                      </p>                                                      
+                                  </div>
+                                  
+                              </div>
+                              </div>
+                          </div>               
+                          <div class="col-lg-2 col-md-4 col-4 col-6 mt-4 p-2">
+                              <div class="card" style="min-height: 350px;">
+                             <div class="image-container">
+                                 <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                             </div>
+                              <div class="card-body">
+                                  <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                  <div class="product-info">
+                                      <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                      <p class="price" style="color: blue;">2.290.000₫</p>
+                                      <p class="old-price" >
+                                          <small style="text-decoration: line-through;">2.619.000₫</small>
+                                          <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                      </p>                                                      
+                                  </div>
+                                  
+                              </div>
+                              </div>
+                          </div>   
+                          <div class="col-lg-2 col-md-4 col-4 col-6 mt-4 p-2">
+                              <div class="card" style="min-height: 350px;">
+                             <div class="image-container">
+                                 <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                             </div>
+                              <div class="card-body">
+                                  <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                  <div class="product-info">
+                                      <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                      <p class="price" style="color: blue;">2.290.000₫</p>
+                                      <p class="old-price" >
+                                          <small style="text-decoration: line-through;">2.619.000₫</small>
+                                          <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                      </p>                                                      
+                                  </div>
+                                  
+                              </div>
+                              </div>
+                          </div>   
+                      
+                      </div>
+  
+                  </div>
+                  <div class="tab-pane fade" id="tab2" role="tabpanel" aria-labelledby="tab2-tab">
+                      <p>This is tab 2 content.</p>
+                  </div>
+              </div>
+          </div>
+          <div class="col-lg-1"></div>
+      </div>
+  </div>
+  
+  <!--endsale02-->
+  
+  
+  <!--category-->
+  <div class="container-fluid  mt-4 ">
+      <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10  ">   
+           <div class="container-fluid mt-2 shadow-lg">
+              <div class="row">
+                  <h5 class="d-inline" style="color:rgb(52, 52, 52);">Danh mục nổi bật</h5>
+                  <div class="col-lg-2 col-md-4 col-4 p-2 no-p-m">
+                  <div class="danhmuc" style="border:none">
+                      <div class="rounded-circle overflow-hidden mx-auto bg-light position-relative p-2" style="width: 100px; height: 100px;">
+                      <!-- Khung hình ảnh bo tròn -->
+                      <img src="./assets/img/Pasted-20240317-225607_preview_rev_1.png" style="width: 80px; height: 60px;" class="./assets/img-fluid  position-absolute bottom-0 start-50 translate-middle-x" alt="...">
+                      </div>
+                      <div class="card-body text-center mb-2">
+                      <!-- Khung văn bản có thể bo tròn -->
+                      <p class="card-text rounded">Điện thoại</p>
+                      </div>
+                  </div>
+                  
+                  
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-4 p-2  no-p-m">
+                  <div class="danhmuc" style="border:none">
+                      <div class="rounded-circle overflow-hidden mx-auto bg-light position-relative p-2" style="width: 100px; height: 100px;">
+                      <!-- Khung hình ảnh bo tròn -->
+                      <img src="./assets/img/Pasted-20240317-231702_preview_rev_1.png" style="width: 80px; height: 60px;" class="./assets/img-fluid  position-absolute bottom-0 start-50 translate-middle-x" alt="...">
+                      </div>
+                      <div class="card-body text-center mb-2">
+                      <!-- Khung văn bản có thể bo tròn -->
+                      <p class="card-text rounded">Laptop</p>
+                      </div>
+                  </div>
+                  
+                  
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-4 p-2 no-p-m">
+                  <div class="danhmuc" style="border:none">
+                      <div class="rounded-circle overflow-hidden mx-auto bg-light position-relative p-2" style="width: 100px; height: 100px;">
+                      <!-- Khung hình ảnh bo tròn -->
+                      <img src="./assets/img/Pasted-20240317-231914_preview_rev_1.png" style="width: 80px; height: 60px;" class="./assets/img-fluid  position-absolute bottom-0 start-50 translate-middle-x" alt="...">
+                      </div>
+                      <div class="card-body text-center mb-2">
+                      <!-- Khung văn bản có thể bo tròn -->
+                      <p class="card-text rounded">Máy tính bảng</p>
+                      </div>
+                  </div>
+                  
+                  
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-4 p-2 no-p-m">
+                  <div class="danhmuc" style="border:none">
+                      <div class="rounded-circle overflow-hidden mx-auto bg-light position-relative p-2" style="width: 100px; height: 100px;">
+                      <!-- Khung hình ảnh bo tròn -->
+                      <img src="./assets/img/Pasted-20240317-232332_preview_rev_1.png" style="width: 80px; height: 60px;" class="./assets/img-fluid  position-absolute bottom-0 start-50 translate-middle-x" alt="...">
+                      </div>
+                      <div class="card-body text-center mb-2">
+                      <!-- Khung văn bản có thể bo tròn -->
+                      <p class="card-text rounded">Hàng gia dụng</p>
+                      </div>
+                  </div>
+                  
+                  
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-4 p-2 no-p-m">
+                  <div class="danhmuc" style="border:none">
+                      <div class="rounded-circle overflow-hidden mx-auto bg-light position-relative p-2" style="width: 100px; height: 100px;">
+                      <!-- Khung hình ảnh bo tròn -->
+                      <img src="./assets/img/Pasted-20240317-232544_preview_rev_1.png" style="width: 80px; height:60px;" class="./assets/img-fluid  position-absolute bottom-0 start-50 translate-middle-x" alt="...">
+                      </div>
+                      <div class="card-body text-center mb-2">
+                      <!-- Khung văn bản có thể bo tròn -->
+                      <p class="card-text rounded">Máy lạnh- máy điều hòa</p>
+                      </div>
+                  </div>
+                  
+                  
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-4 p-2 no-p-m">
+                  <div class="danhmuc" style="border:none">
+                      <div class="rounded-circle overflow-hidden mx-auto bg-light position-relative p-2" style="width: 100px; height: 100px;">
+                      <!-- Khung hình ảnh bo tròn -->
+                      <img src="./assets/img/Pasted-20240317-232955_preview_rev_1.png" style="width: 80px; height:60px;" class="./assets/img-fluid  position-absolute bottom-0 start-50 translate-middle-x" alt="...">
+                      </div>
+                      <div class="card-body text-center mb-2">
+                      <!-- Khung văn bản có thể bo tròn -->
+                      <p class="card-text rounded">Tivi</p>
+                      </div>
+                  </div>
+                  
+                  
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-4 p-2 no-p-m">
+                  <div class="danhmuc" style="border:none">
+                      <div class="rounded-circle overflow-hidden mx-auto bg-light position-relative p-2" style="width: 100px; height: 100px;">
+                      <!-- Khung hình ảnh bo tròn -->
+                      <img src="./assets/img/Pasted-20240317-233237_preview_rev_1.png" style="width: 80px; height:60px;" class="./assets/img-fluid  position-absolute bottom-0 start-50 translate-middle-x" alt="...">
+                      </div>
+                      <div class="card-body text-center mb-2">
+                      <!-- Khung văn bản có thể bo tròn -->
+                      <p class="card-text rounded">Thiết bị Xiaomi</p>
+                      </div>
+                  </div>
+                  
+                  
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-4 p-2 no-p-m">
+                  <div class="danhmuc" style="border:none">
+                      <div class="rounded-circle overflow-hidden mx-auto bg-light position-relative p-2" style="width: 100px; height: 100px;">
+                      <!-- Khung hình ảnh bo tròn -->
+                      <img src="./assets/img/Pasted-20240317-233527_preview_rev_1.png" style="width: 80px; height: 60px;" class="./assets/img-fluid  position-absolute bottom-0 start-50 translate-middle-x" alt="...">
+                      </div>
+                      <div class="card-body text-center mb-2">
+                      <!-- Khung văn bản có thể bo tròn -->
+                      <p class="card-text rounded">Apple</p>
+                      </div>
+                  </div>
+                  
+                  
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-4 p-2 no-p-m">
+                  <div class="danhmuc" style="border:none">
+                      <div class="rounded-circle overflow-hidden mx-auto bg-light position-relative p-2" style="width: 100px; height: 100px;">
+                      <!-- Khung hình ảnh bo tròn -->
+                      <img src="./assets/img/Pasted-20240317-233843_preview_rev_1.png" style="width: 80px; height:60px;" class="./assets/img-fluid  position-absolute bottom-0 start-50 translate-middle-x" alt="...">
+                      </div>
+                      <div class="card-body text-center mb-2">
+                      <!-- Khung văn bản có thể bo tròn -->
+                      <p class="card-text rounded">Samsung</p>
+                      </div>
+                  </div>
+                  
+                  
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-4 p-2 no-p-m">
+                  <div class="danhmuc" style="border:none">
+                      <div class="rounded-circle overflow-hidden mx-auto bg-light position-relative p-2" style="width: 100px; height: 100px;">
+                      <!-- Khung hình ảnh bo tròn -->
+                      <img src="./assets/img/Pasted-20240317-234431_preview_rev_1.png" style="width: 80px; height:60px;" class="./assets/img-fluid  position-absolute bottom-0 start-50 translate-middle-x" alt="...">
+                      </div>
+                      <div class="card-body text-center mb-2">
+                      <!-- Khung văn bản có thể bo tròn -->
+                      <p class="card-text rounded">Sim FPT</p>
+                      </div>
+                  </div>
+                  
+                  
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-4 p-2 no-p-m">
+                  <div class="danhmuc" style="border:none">
+                      <div class="rounded-circle overflow-hidden mx-auto bg-light position-relative p-2" style="width: 100px; height: 100px;">
+                      <!-- Khung hình ảnh bo tròn -->
+                      <img src="./assets/img/Pasted-20240317-234606_preview_rev_1.png" style="width: 80px; height: 60px;" class="./assets/img-fluid  position-absolute bottom-0 start-50 translate-middle-x" alt="...">
+                      </div>
+                      <div class="card-body text-center mb-2">
+                      <!-- Khung văn bản có thể bo tròn -->
+                      <p class="card-text rounded">Đồng hồ thông minh</p>
+                      </div>
+                  </div>
+                  
+                  
+                  </div>
+                  <div class="col-lg-2 col-md-4 col-4 p-2 no-p-m">
+                  <div class="danhmuc" style="border:none">
+                      <div class="rounded-circle overflow-hidden mx-auto bg-light position-relative p-2" style="width: 100px; height: 100px;">
+                      <!-- Khung hình ảnh bo tròn -->
+                      <img src="./assets/img/Pasted-20240317-234810_preview_rev_1.png" style="width: 80px; height:60px;" class="./assets/img-fluid  position-absolute bottom-0 start-50 translate-middle-x" alt="...">
+                      </div>
+                      <div class="card-body text-center mb-2">
+                      <!-- Khung văn bản có thể bo tròn -->
+                      <p class="card-text rounded">Phụ kiện</p>
+                      </div>
+                  </div>
+                  
+                  
+                  </div>
+                
+      
+          
+              </div>
+           </div>
+          </div>
+      <div class="col-lg-1"></div>
+      </div>
+  
+    </div>
+  <!---endcategory-->
+  
+  
+  
+  
+  <!--product laptop-->
+  <div class="container-fluid  mt-4 ">
+      <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            
+             <div class="container-fluid mt-2">
+              <div class="row shadow-lg bnlaptop">
+                  <div class="col-lg-12">
+                    <h3 class="d-inline" style="color:rgb(255, 255, 255);">LAPTOP</h2>
+                    <small class="float-end" style="color:rgb(255, 255, 255);">Xem tất cả >></small>
+                    <hr>
+                    <div class="row contentcenter"> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0s" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                  </div>
+    
+              
+                
+                
+                </div>
+             </div>
+  
+          </div>
+      <div class="col-lg-1"></div>
+      </div>
+  
+    </div>
+  <!--endproduct01-->
+  
+  <!--product linh kiện-->
+  <div class="container-fluid  mt-4 ">
+      <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            
+         <div class="container-fluid mt-2">
+          <div class="row shadow-lg bnlk">
+              <div class="col-lg-12">
+                <h3 class="d-inline" style="color:rgb(255, 255, 255);">LINH KIỆN</h2>
+                <small class="float-end" style="color:rgb(255, 255, 255);">Xem tất cả >></small>
+                <hr>
+                <div class="row contentcenter"> 
+                    <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                        <div class="border-0" >
+                           <div class="image-container">
+                                 <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                           </div>
+                            <div class="card-body m-2">
+                                <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                <div class="product-info">
+                                    <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                    <p class="price" style="color: blue;">2.290.000₫</p>
+                                    <p class="old-price">
+                                        <small style="text-decoration: line-through;">2.619.000₫</small>
+                                        <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                    </p>                                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                        <div class="border-0" >
+                           <div class="image-container">
+                                 <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                           </div>
+                            <div class="card-body m-2">
+                                <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                <div class="product-info">
+                                    <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                    <p class="price" style="color: blue;">2.290.000₫</p>
+                                    <p class="old-price">
+                                        <small style="text-decoration: line-through;">2.619.000₫</small>
+                                        <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                    </p>                                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                        <div class="border-0" >
+                           <div class="image-container">
+                                 <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                           </div>
+                            <div class="card-body m-2">
+                                <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                <div class="product-info">
+                                    <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                    <p class="price" style="color: blue;">2.290.000₫</p>
+                                    <p class="old-price">
+                                        <small style="text-decoration: line-through;">2.619.000₫</small>
+                                        <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                    </p>                                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                        <div class="border-0" >
+                           <div class="image-container">
+                                 <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                           </div>
+                            <div class="card-body m-2">
+                                <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                <div class="product-info">
+                                    <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                    <p class="price" style="color: blue;">2.290.000₫</p>
+                                    <p class="old-price">
+                                        <small style="text-decoration: line-through;">2.619.000₫</small>
+                                        <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                    </p>                                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                        <div class="border-0" >
+                           <div class="image-container">
+                                 <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                           </div>
+                            <div class="card-body m-2">
+                                <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                <div class="product-info">
+                                    <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                    <p class="price" style="color: blue;">2.290.000₫</p>
+                                    <p class="old-price">
+                                        <small style="text-decoration: line-through;">2.619.000₫</small>
+                                        <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                    </p>                                                      
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+              </div>
+  
+          
+            
+            
+            </div>
+  
+         </div>
+          </div>
+      <div class="col-lg-1"></div>
+      </div>
+  
+    </div>
+  <!--endproduct01-->
+  
+  
+  <!--product màn hình-->
+  <div class="container-fluid  mt-4 ">
+      <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            <div class="container mt-2">
+              <div class="row shadow-lg bnmh">
+                  <div class="col-lg-12">
+                    <h3 class="d-inline" style="color:rgb(255, 255, 255);">Màn Hình</h2>
+                    <small class="float-end" style="color:rgb(255, 255, 255);">Xem tất cả >></small>
+                    <hr>
+                    <div class="row contentcenter"> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                  </div>  
+                </div>
+            </div>
+          </div>
+      <div class="col-lg-1"></div>
+      </div>
+  
+    </div>
+  <!--endproduct01-->
+  
+  
+  <!--product game -->
+  <div class="container-fluid  mt-4 ">
+      <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            
+             <div class="container mt-2">
+              <div class="row shadow-lg bngaming">
+                  <div class="col-lg-12">
+                    <h3 class="d-inline" style="color:rgb(255, 255, 255);">GAMING GEAR</h2>
+                    <small class="float-end" style="color:rgb(255, 255, 255);">Xem tất cả >></small>
+                    <hr>
+                    <div class="row contentcenter"> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                  </div>
+    
+              
+                
+                
+                </div>
+             </div>
+  
+          </div>
+      <div class="col-lg-1"></div>
+      </div>
+  
+    </div>
+  <!--endproduct01-->
+  
+  
+  
+  
+  <!--product dienmay-->
+  <div class="container-fluid  mt-4 ">
+      <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            
+             <div class="container mt-2">
+              <div class="row shadow-lg bngd">
+                  <div class="col-lg-12">
+                    <h3 class="d-inline" style="color:rgb(255, 255, 255);">GIA DỤNG</h2>
+                    <small class="float-end" style="color:rgb(255, 255, 255);">Xem tất cả >></small>
+                    <hr>
+                    <div class="row contentcenter"> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="laptop col-lg-3 col-md-4  col-5 m-1" >
+                            <div class="border-0" >
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </div>
+                  </div>
+                </div>
+             </div>
+  
+          </div>
+      <div class="col-lg-1"></div>
+      </div>
+  
+    </div>
+  <!--endproduct01-->
+  
+  <!--welcome-->
+  <div class="container-fluid mt-4">
+      <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+          <img src="./assets/img/welcom.png" class="img-fluid w-100">
+          </div>
+          <div class="col-lg-1"></div>
+     </div>
+  </div>
+  <!--endwelcome-->
+  
+  <!--products sales-->
+  <div class="container-fluid  mt-4 ">
+      <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            
+              <div class="row">
+                <div class="col-lg-12" >
+                  <div class="container-fluid mt-2 p-0 rounded" style="background-color: rgb(255, 255, 255);">
+                      <div class="m-2">
+                          <h3 class="d-inline d-flex justify-content-center p-2" style="color:rgb(52, 52, 52);margin-top: 5px;">SẢN PHẨM NỔI BẬT</h3>
+                      </div>
+                      <div class="container mb-3">
+                        <div class="row">
+      
+                          <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                            <div class="card shadow-sm" style="max-height: 370px; max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                             <div class="image-container">
+                                 <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                             </div>
+                              <div class="card-body m-2">
+                                  <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                  <div class="product-info">
+                                      <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                      <p class="price" style="color: blue;">2.290.000₫</p>
+                                      <p class="old-price">
+                                          <small style="text-decoration: line-through;">2.619.000₫</small>
+                                          <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                      </p>                                                      
+                                  </div>
+                              </div>
+                            </div>
+                            
+                            
+                          </div>
+                          <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+      
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+      
+                         <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                            <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                             <div class="image-container">
+                                 <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                             </div>
+                              <div class="card-body m-2">
+                                  <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                  <div class="product-info">
+                                      <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                      <p class="price" style="color: blue;">2.290.000₫</p>
+                                      <p class="old-price">
+                                          <small style="text-decoration: line-through;">2.619.000₫</small>
+                                          <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                      </p>                                                      
+                                  </div>
+                              </div>
+                            </div>
+                            
+                            
+                          </div>
+                          <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+      
+                              <div class="col-lg-12 d-flex justify-content-center mt-4">
+                                  <nav aria-label="Page navigation example">
+                                      <ul class="pagination justify-content-end">
+                                        <li class="page-item disabled">
+                                          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">Next</a>
+                                        </li>
+                                      </ul>
+                                    </nav>     
+                              </div>
+                        </div>
+                      </div>
+                
+                  </div>
+                </div>
+  
+               <!---content-->
+              
+               
+  
+          </div>
+      <div class="col-lg-1"></div>
+      </div>
+  
+    </div>
+  <!--endproducts sale-->
+  
+  
+  
+  </div>
+  <!--endprodctsale-->
+  
+  <!--thương hiệu độc quyền-->
+  <div class="container-fluid mt-4">
+      <div class="row">
+         <div class="col-lg-1"></div>
+         <div class="col-lg-10">
+             <h3 class="d-inline" style="color:rgb(52, 52, 52);">Thương hiệu độc quyền</h3>
+             <div id="carouselExample" class="carousel slide mt-2">
+                 <div class="carousel-inner">
+                   <div class="carousel-item active">
+                    <div class="row">
+                     <div class="col-lg-4">
+                         <img src="./assets/img/bntgdd.jpg" class="img-fluid w-100">
+                     </div>
+                     <div class="col-lg-4">
+                         <img src="./assets/img/bntgdd1.jpg" class="img-fluid w-100">
+                     </div>
+                     <div class="col-lg-4">
+                         <img src="./assets/img/bntgdd2.jpg" class="img-fluid w-100">
+                     </div>
+                     
+                    </div>
+                   </div>
+                   <div class="carousel-item">
+                     <div class="row">
+                         <div class="col-lg-4">
+                             <img src="./assets/img/bntgdd1.jpg" class="img-fluid w-100">
+                         </div>
+                         <div class="col-lg-4">
+                             <img src="./assets/img/bntgdd2.jpg" class="img-fluid w-100" >
+                         </div>
+                         <div class="col-lg-4">
+                             <img src="./assets/img/bntgdd3.jpg" class="img-fluid w-100">
+                         </div>
+                         
+                        </div>
+                   </div>
+                 </div>
+                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                   <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                   <span class="visually-hidden">Previous</span>
+                 </button>
+                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                   <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                   <span class="visually-hidden">Next</span>
+                 </button>
+               </div>
+             
+         </div>
+         <div class="col-lg-1"></div>
+      </div>
+     </div>
+     <!--endthuonghieudocquyen-->
+  
+  
+  
+  
+  <!--dành cho bạn-->
+  <div class="container-fluid  mt-4 ">
+      <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+            
+              <div class="row">
+                <div class="col-lg-12" >
+                  <div class="container-fluid mt-2 p-0 rounded" style="background-color: rgb(255, 255, 255);">
+                      <div class="m-2">
+                          <h3 class="d-inline d-flex justify-content-center p-2" style="color:rgb(52, 52, 52);margin-top: 5px;">DÀNH CHO BẠN</h3>
+                      </div>
+                      <div class="container mb-3">
+                        <div class="row">
+      
+                          <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                            <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                             <div class="image-container">
+                                 <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                             </div>
+                              <div class="card-body m-2">
+                                  <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                  <div class="product-info">
+                                      <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                      <p class="price" style="color: blue;">2.290.000₫</p>
+                                      <p class="old-price">
+                                          <small style="text-decoration: line-through;">2.619.000₫</small>
+                                          <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                      </p>                                                      
+                                  </div>
+                              </div>
+                            </div>
+                            
+                            
+                          </div>
+                          <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+      
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+      
+                         <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                            <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                             <div class="image-container">
+                                 <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                             </div>
+                              <div class="card-body m-2">
+                                  <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                  <div class="product-info">
+                                      <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                      <p class="price" style="color: blue;">2.290.000₫</p>
+                                      <p class="old-price">
+                                          <small style="text-decoration: line-through;">2.619.000₫</small>
+                                          <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                      </p>                                                      
+                                  </div>
+                              </div>
+                            </div>
+                            
+                            
+                          </div>
+                          <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6 mt-2 no-p-m">
+                              <div class="card shadow-sm" style="max-height: 370px; border: 1px solid #dee2e6; border-radius: 0;">
+                               <div class="image-container">
+                                     <img src="./assets/img/product01.jpg" class="card-img-top m-0 w-100 img-fluid"  alt="Product 1">
+                               </div>
+                                <div class="card-body m-2">
+                                    <h6 class="card-title" style="color: rgb(130, 127, 127);">Samsung</h6>
+                                    <div class="product-info">
+                                        <p class="card-text"><small>Màn hình LCD SAMSUNG 24" LS24C310EAEXXV</small></p>
+                                        <p class="price" style="color: blue;">2.290.000₫</p>
+                                        <p class="old-price">
+                                            <small style="text-decoration: line-through;">2.619.000₫</small>
+                                            <span class="discount" style="color: rgb(109, 109, 232);"><small>-12.562%</small></span>
+                                        </p>                                                      
+                                    </div>
+                                </div>
+                              </div>
+                              
+                              
+                            </div>
+      
+                              <div class="col-lg-12 d-flex justify-content-center mt-4">
+                                  <nav aria-label="Page navigation example">
+                                      <ul class="pagination justify-content-end">
+                                        <li class="page-item disabled">
+                                          <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                        <li class="page-item">
+                                          <a class="page-link" href="#">Next</a>
+                                        </li>
+                                      </ul>
+                                    </nav>     
+                              </div>
+                        </div>
+                      </div>
+                
+                  </div>
+                </div>
+  
+               <!---content-->
+              
+               
+  
+          </div>
+      <div class="col-lg-1"></div>
+      </div>
+  
+    </div>
+  <!--endproducts sale-->
+  
+  
+  
+  </div>
+  <!--endprodctsale-->
+  
+  
+    <!--welcome-->
+    <div class="container-fluid mt-4">
+      <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+          <img src="./assets/img/thanks.png" class="img-fluid w-100">
+          </div>
+          <div class="col-lg-1"></div>
+     </div>
+  </div>
+  <!--endwelcome-->
+  
+  <!--post-->
+  <div class="container-fluid mt-5">
+      <div class="row">
+         <div class="col-lg-1"></div>
+         <div class="col-lg-10 ">
+            <div class="container-fluid mt-2 rounded" style="background-color: rgb(255,255,255);">
+              <h3 class="d-inline" style="color:rgb(52, 52, 52);">Tin tức công nghệ</h3>
+              <div id="carouselExample" class="carousel slide mt-2">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active">
+                     <div class="row">
+   
+                      <div class="col-lg-3 col-6">
+                         <a href="https://phongvu.vn/cong-nghe/so-sanh-iphone-15-pro-max-va-iphone-14-pro-max/" target="_blank"><img src="./assets/img/ssip.jpg" class="img-fluid w-100" style="height:200px ">
+                         </a>
+                           <h6 class="text-center">So sánh iphone 15 pro max và ...</h6>
+                      
+                      </div>
+                      <div class="col-lg-3 col-6">
+                       <a href="https://phongvu.vn/cong-nghe/cac-dong-macbook-pro-moi-nhat/" target="_blank"> <img src="./assets/img/macbook.jpg" class="img-fluid w-100" style="height:200px ">
+                       </a>
+                           <h6 class="text-center">Tổng hợp các dòng macbook ...</h6>
+                     
+                    </div>
+                    <div class="col-lg-3 col-6">
+                       <a href="https://phongvu.vn/cong-nghe/so-sanh-samsung-galaxy-s24-va-s24-plus-va-s24-ultra/" target="_blank " > <img src="./assets/img/samsungss.jpg" class="img-fluid w-100" style="height:200px ">
+                       </a>
+                           <h6 class="text-center">So sánh 3 dòng samsung ...</h6>
+                     
+                    </div>
+                    <div class="col-lg-3 col-6">
+                       <a href="https://phongvu.vn/cong-nghe/laptop-acer-nitro-co-tot-khong/" target="_blank"> <img src="./assets/img/top5laptop.webp" class="img-fluid w-100" style="height:200px ">
+                       </a>
+                        <h6 class="text-center">Top 5 dòng laptop acer nitro ...</h6>
+                        
+                    </div>
+                      
+                     </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+             
+         </div>
+         <div class="col-lg-1"></div>
+      </div>
+     </div>
+     <!--end-->
+   
+     <!--logo-->
+  <div class="container-fluid mt-4">
+      <div class="row">
+          <div class="col-lg-1"></div>
+          <div class="col-lg-10">
+  
+            <div class="row">
+  
+              <div class="col-lg-3 col-md-4 col-5 rounded shadow-lg m-2 banner01 logolatop" style="background-color: rgb(255, 255, 255); box-shadow:none !important;">
+                  <img src="assets/img/accer.jpg" class="img-fluid w-100">
+                </div>
+                <div class="col-lg-3 col-md-4 col-5 rounded shadow-lg  m-2 banner01 logolatop" style="background-color: rgb(255, 255, 255); box-shadow:none !important;">
+                  <img src="assets/img/amd.jpg" class="img-fluid w-100">
+                </div>
+                <div class="col-lg-3 col-md-4 col-5 rounded shadow-lg  m-2 banner01  logolatop" style="background-color: rgb(255, 255, 255); box-shadow:none !important;">
+                  <img src="assets/img/asus.jpg" class="img-fluid w-100">
+                </div>
+                <div class="col-lg-3 col-md-4 col-5 rounded shadow-lg m-2 banner01 logolatop" style="background-color: rgb(255, 255, 255); box-shadow:none !important;">
+                  <img src="assets/img/hp.jpg" class="img-fluid w-100">
+                </div>
+                
+                <div class="col-lg-3 col-md-4 col-5 rounded shadow-lg m-2 banner01 logolatop" style="background-color: rgb(255, 255, 255); box-shadow:none !important;">
+                  <img src="assets/img/intel.jpg" class="img-fluid w-100">
+                </div>
+                <div class="col-lg-3 col-md-4 col-5 rounded shadow-lg  m-2 banner01 logolatop" style="background-color: rgb(255, 255, 255); box-shadow:none !important;">
+                  <img src="assets/img/lenovo.jpg" class="img-fluid w-100">
+                </div>
+                <div class="col-lg-3 col-md-4 col-5 rounded shadow-lg  m-2 banner01 logolatop" style="background-color: rgb(255, 255, 255); box-shadow:none !important;">
+                  <img src="assets/img/msi.jpg" class="img-fluid w-100">
+                </div>
+                <div class="col-lg-3 col-md-4 col-5 rounded shadow-lg m-2 banner01 logolatop" style="background-color: rgb(255, 255, 255); box-shadow:none !important;">
+                  <img src="assets/img/samsung.jpg" class="img-fluid w-100">
+                </div>
+              
+            </div>
+              
+          </div>
+          <div class="col-lg-1"></div>
+      </div>
+  </div>
+  <!--endlogo-->
+  </div>
+  
+
+
+
+
+<script src="./assets/js/bootstrap.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    // Lệnh sau sẽ kích hoạt tự động chuyển slide mỗi 3 giây
+    var myCarousel = document.getElementById('carouselExampleIndicators')
+    var carousel = new bootstrap.Carousel(myCarousel, {
+        interval: 3000
+    });
+     // Lấy danh sách các tab
+     var tabs = document.querySelectorAll('.nav-link');
+
+// Thêm sự kiện click cho mỗi tab
+tabs.forEach(function(tab) {
+    tab.addEventListener('click', function() {
+        // Loại bỏ lớp 'active' từ tất cả các tab trước khi thêm vào tab mới
+        tabs.forEach(function(t) {
+            t.classList.remove('active');
+        });
+
+        // Thêm lớp 'active' cho tab hiện tại
+        this.classList.add('active');
+    });
+});
+
+// Thiết lập thời gian kết thúc đếm ngược (24 giờ tính từ thời điểm hiện tại)
+var endTime = new Date();
+endTime.setHours(endTime.getHours() + 20); // Thêm 24 giờ
+
+var countdownElement = document.getElementById('countdown');
+
+function updateCountdown() {
+    var currentTime = new Date();
+    var difference = endTime - currentTime;
+
+    if (difference <= 0) {
+        clearInterval(timer);
+        countdownElement.innerHTML = 'Hết giờ!';
+    } else {
+        var hours = Math.floor(difference / (1000 * 60 * 60));
+        var minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+        hours = (hours < 10) ? '0' + hours : hours;
+        minutes = (minutes < 10) ? '0' + minutes : minutes;
+        seconds = (seconds < 10) ? '0' + seconds : seconds;
+
+        countdownElement.innerHTML = hours + ':' + minutes + ':' + seconds;
+    }
+}
+
+// Cập nhật đồng hồ đếm ngược mỗi giây
+var timer = setInterval(updateCountdown, 1000);
+
+</script>
+</body>
+</html>
