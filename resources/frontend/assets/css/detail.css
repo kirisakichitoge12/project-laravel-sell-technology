@@ -1,0 +1,76 @@
+.imgsmall :hover{
+  border: 2px solid rgb(181, 242, 236); 
+}
+.expanded {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.dashed-line {
+  border-style: dashed; /* Thiết lập kiểu đường viền là dashed */
+}
+
+/* CSS cho danh sách gạch đầu hàng */
+.dashed-list {
+      list-style-type: none; /* Loại bỏ ký hiệu danh sách */
+      padding-left: 0; /* Loại bỏ khoảng cách bên trái */
+  }
+
+  .dashed-list > li {
+      position: relative; /* Thiết lập vị trí tương đối */
+  }
+
+  .dashed-list > li::before {
+      content: ""; /* Thêm nội dung trước mỗi mục trong danh sách */
+      position: absolute; /* Thiết lập vị trí tuyệt đối */
+      left: -20px; /* Khoảng cách từ mép trái của mục danh sách */
+      top: 50%; /* Đặt nét gạch ở giữa chiều cao của mục danh sách */
+      transform: translateY(-50%); /* Dịch chuyển nét gạch xuống 50% chiều cao */
+      width: 6px; /* Chiều rộng của nét gạch */
+      height: 1px; /* Chiều cao của nét gạch */
+      background-color: black; /* Màu sắc của nét gạch */
+  }
+  .container {
+  position: relative;
+}
+
+.closeicon {
+  display: none;
+  position: absolute;
+  top: 0px; /* Điều chỉnh vị trí top theo nhu cầu */
+  right: 0px; /* Điều chỉnh vị trí right theo nhu cầu */
+  z-index: 99999;
+}
+
+/* CSS */
+.btn.active {
+  border: 2px solid rgb(181, 242, 236);
+}
+/* thong tin van chuyen */
+.line-with-icon {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.line {
+    flex: 1;
+    height: 5px;
+    background-color: rgb(77, 203, 113);
+}
+.linenonecolor{
+    flex: 1;
+    height: 5px;
+    min-width: 50px;
+    background-color: rgb(231, 231, 231);
+}
+.icon {
+    margin: 0 10px;
+}
+.coloricon
+{
+  color: rgb(77, 203, 113);
+}

@@ -1,0 +1,82 @@
+#searchResults {
+    position: absolute;
+    z-index: 1000;
+    width: 280px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    background-color:rgb(255, 255, 255);
+    border: 1px solid #ddd;
+}
+
+#searchResults li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#searchResults li:hover {
+    background-color: #ccc;
+}
+.selected {
+    background-color: #3da7f3;
+    color: #fff;
+}
+/* Định dạng input */
+input[type=number] {
+    border: 1px solid #ced4da; /* Đường viền */
+    border-radius: 5px; /* Bo góc */
+    padding: 8px; /* Khoảng cách bên trong */
+    box-sizing: border-box; /* Đảm bảo rằng kích thước tổng cộng không thay đổi với việc thêm đường viền */
+    outline: none; /* Loại bỏ đường viền màu xanh khi focus */
+}
+
+/* Định dạng placeholder */
+input[type=number]::placeholder {
+    color: #6c757d; /* Màu chữ */
+    opacity: 0.5; /* Độ mờ */
+}
+
+/* Định dạng khi focus */
+input[type=number]:focus {
+    border-color: #80bdff; /* Màu đường viền khi focus */
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Hiển thị hiệu ứng khi focus */
+}
+.flex-container {
+    display: flex;
+    justify-content: space-between; /* Canh giữa các phần tử */
+    align-items: center; /* Căn chỉnh theo chiều dọc */
+}
+.accordion-item{
+  border: none;
+}
+button.accordion-button:focus {
+outline: none; /* Loại bỏ đường viền khi focus */
+box-shadow: none; /* Loại bỏ đổ bóng khi focus */
+}
+.mt-between-containers {
+    margin-top: 20px; /* hoặc bất kỳ giá trị nào bạn muốn */
+}
+.button-group {
+    display: flex; /* Sử dụng flexbox */
+    align-items: center; /* Căn chỉnh các phần tử theo chiều dọc */
+}
+
+.button-group button {
+    margin-right: 5px; /* Khoảng cách giữa các nút */
+    border: 1px solid #ccc; /* Đường viền cho các nút */
+    background-color: rgb(248, 248, 252);
+}
+.btn.active {
+    background-color: #75a5d2 !important; /* Màu sắc khi nút được nhấn */
+}
+.no-p-m {
+padding: 0 !important;
+margin: 0 !important;
+}
+.price,
+.old-price,
+.discount {
+margin: 0; /* Xóa margin */
+padding: 0; /* Xóa padding */
+}
+

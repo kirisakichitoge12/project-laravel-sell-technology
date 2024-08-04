@@ -1,0 +1,39 @@
+.default-layout .pagination {
+    display: flex;
+    justify-content: center;
+}
+
+.default-layout .pagination .page-item {
+    margin: 0 4px;
+}
+
+.default-layout .pagination .page-item.active .page-link {
+    color: #4200ff;
+    border: 1px solid #4200ff;
+    background-color: unset;
+}
+
+.default-layout .pagination .page-item .page-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #212b36;
+}
+.colorlink
+{
+    color:rgb(64, 64, 64) !important;
+    font-size: large;
+    font-weight: 200;
+
+}
+
+
+
+
